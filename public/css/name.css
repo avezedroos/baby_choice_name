@@ -1,0 +1,213 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* html,body{
+    width: ;
+} */
+body{
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div{
+    margin: 5px;
+    
+}
+header div img{
+    width: 30px;
+    height: 30px;
+}
+.categorie_name{
+    font-size: 10px;
+}
+
+.toglle_box{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin-top: 10px;
+}
+.toggle_btn{
+    display: flex;
+    width: 90%;
+    height: 50px;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 80px;
+
+}
+.toggle_btn .common_gender_btn{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+font-weight: bold;
+}
+.onfocus{
+    border: 2px solid;
+    box-shadow:5px 5px gray ;
+}
+.toggle_btn .Boy{
+    background-color: rgb(157, 201, 231);
+    width:30%;
+    margin:0px -21px 0px 0px;
+    /* border: 45px; */
+    border-radius: 45px 0px 0px 45px;
+}
+.toggle_btn .Girl{
+    background-color: pink;
+    width:30%;
+    margin:0px 0px 0px -21px;
+    border-radius: 0px 45px 45px 0px;
+}
+.toggle_btn .All{
+    background-color: bisque;
+    width:70%;
+    border-radius: 45px;
+    z-index: 1;
+    border:2px solid rgb(0, 0, 0) ;
+    /* box-shadow: inset 5px 5px 10px rgba(190, 237, 232) */
+}
+.sub_categories_head{
+    margin: 15px;
+}
+.sub_categories_slider_box{
+    display: flex;
+    overflow-x: scroll;
+    margin: 15px;
+
+}
+.sub_categories_slider{
+    display: flex;
+}
+.subcategorie_containt{
+    display: flex;
+}
+.subcategorie_containt div{
+    height: 30px;
+    min-width: 50px;
+    /* border: 2px solid; */
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 5px;
+    text-wrap: nowrap;
+    border-radius: 30px;
+    background-color: rgb(210, 209, 209);
+}
+#all{
+    border: 2px solid black;
+}
+.sub_categories_slider_box::-webkit-scrollbar{
+    display: none;
+}
+/* this is for firfox */
+.sub_categories_slider_box{
+    scrollbar-width: none;
+}
+
+.alphabeticle_slider_container{
+    overflow-x: scroll;
+    display: flex;
+    margin: 15px;
+}
+.alphabeticle_slider{
+    display: flex;
+}
+.alphabeticle_content{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.alphabeticle_slider_container::-webkit-scrollbar{
+    display: none;
+}
+/* this is for firfox */
+.alphabeticle_slider_container{
+    scrollbar-width: none;
+}
+.alphabeticle_content_focus{
+    background-color: rgb(175, 224, 246);
+}
+.name_divs_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  /* background-color: rgb(172, 244, 244); */
+}
+.divs_style {
+    width: 80%;
+    height: 100px;
+    border: 2px solid;
+    margin: 5px;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: 
+        "gender name like more"
+        "gender meaning like more";
+    /* grid-template-columns: repeat(4, 1fr); */
+     /* Adjust the number of columns based on your layout */
+     grid-template-columns: 50px auto 50px 50px;
+
+}
+
+.gender_div { grid-area: gender; }
+.namesection { grid-area: name; }
+.meaningsection { grid-area: meaning; }
+.likesection { grid-area: like; }
+.more_btn { grid-area: more; }
+
+
+
+.gender_div{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.divs_style img{
+    width: 40px;
+    height: 40px;
+}
+
+.likesection ,.more_btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.meaningsection p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
+    text-overflow: ellipsis;
+}
+
+
+/* @media (max-width: 300px) {
+    .meaningsection p{
+        max-width: 70px;
+    }
+        
+} */

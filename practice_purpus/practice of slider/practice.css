@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    
+}/*
+header{
+    height: 30px;
+    width: 100%;
+    background-color: blanchedalmond;
+    z-index: 3;
+}
+.main{
+    width: 100%;
+    height: 1000px;
+    background-color: aqua;
+}
+.nameframe{
+    height: 500px;
+    width: 100%;
+    border: none;
+} */
+
+.toglle_box{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.toggle_btn{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 40px;
+
+}
+.toggle_btn .common_gender_btn{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.onfocus{
+    border: 2px solid;
+    box-shadow:5px 5px gray ;
+}
+.toggle_btn .Boy{
+    background-color: rgb(157, 201, 231);
+    width:30%;
+    margin: -5px;
+}
+.toggle_btn .Girl{
+    background-color: pink;
+    width:30%;
+    margin: -5px;
+}
+.toggle_btn .All{
+    background-color: bisque;
+    width:60%;
+    border-radius: 45px;
+    z-index: 1;
+}
+.alphabeticle_slider_container{
+    overflow-x: scroll;
+    display: flex;
+}
+.alphabeticle_slider{
+    display: flex;
+}
+.alphabeticle_content{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 4px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alphabeticle_slider_container::-webkit-scrollbar{
+    display: none;
+}
+/* this is for firfox */
+.alphabeticle_slider_container{
+    scrollbar-width: none;
+}

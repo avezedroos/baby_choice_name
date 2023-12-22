@@ -1,0 +1,531 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    width: 100VW;
+    height: 100vh;
+}
+
+
+iframe{
+    border: none;
+}
+
+.header{
+    height: 70px;
+    width: 100%;
+    background-color: antiquewhite;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    /* padding: 10px; */
+    justify-content:space-around;
+    z-index: 3;
+}
+
+.logo{
+    font-size: 30px;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+}
+.b_bold{font: bold;}
+.choice{font: 1px;}
+
+.customize_heder{
+    display: flex;
+    align-items: center;
+    margin:0 10px ;
+    padding: 0px;
+}
+/* #app_categories{
+    color: #070606;
+} */
+
+/* footer start here */
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color: antiquewhite;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    padding: 10px;
+    justify-content:space-around;
+    z-index: 3;
+}
+.tooltip {
+    position: absolute;
+    display: none;
+    background-color: #f8f3f3;
+    color: #070606;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 20px;
+    bottom: -10px;
+    left: -5px;
+}
+.tooltip_larg{
+    left: -10px;
+}
+
+.customize_footer:hover .tooltip {
+    display: block;
+}
+
+.customize_footer{
+    display: flex;
+    align-items: center;
+    margin:0 20px ;
+    position: relative;
+}
+                               /* app categorie box start here */
+.app_categorie_box{
+    width: 70vw;
+    height: 0vh;
+    background-color: rgb(250, 250, 250);
+    z-index: 4;
+    /* display: none; */
+    overflow: hidden;
+    transition: 1s;
+    
+}
+.app_categorie_box a{
+    text-decoration: none;
+    color: black;
+}
+.app_categorie_box a:active{
+    background-color: red; /* Set to the background color you want or 'transparent' to remove it */
+}
+.app_categorie_upper_box{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-bottom: 0px solid black;
+    box-shadow:0 0 0 0px #666666;
+}
+.app_categorie_lower_box{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+/* .app_categorie_box
+.app_categorie_contant{
+    position: relative;
+} */
+.app_categorie_close_btn{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.app_categorie_logo{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(170, 185, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.app_categorie_common img{
+    width: 35px;
+}
+.app_categorie_common{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.app_categorie_Suggestion{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app_categorie_Suggestion_btn{
+   background-color: rgb(130, 130, 209);
+   width: 80%;
+   height: 90%;
+   border-radius: 30px;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* serach box start here */
+.search_box{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 4;
+    background-color: aliceblue;
+    display: none;
+}
+.search_content{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+.search_back_btn img{
+    width: 45px;
+}
+.search_input{
+    width: 70%;
+    height: 30px;
+    border-radius: 40px;
+    padding: 2px;
+}
+
+/* recent activity */
+.recent_activity_box{
+    height: 100%;
+    width: 70%;
+    background-color: aliceblue;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 4;
+    display:none ;
+}
+/* contain start here */
+main{
+    flex: 1;
+    overflow-y: auto;
+    padding: 70px 0px 60px 0px;
+    
+}
+
+.categorie_card-slider{
+    width: 100%;
+    overflow: scroll;
+}
+/* hide scrollbar from chrom,safari, opera */
+.categorie_card-slider::-webkit-scrollbar{
+    display: none;
+}
+/* this is for firfox */
+.categorie_card-slider{
+    scrollbar-width: none;
+}
+/* this is for microsoft edg */
+
+.categorie_slider-content{
+    display: flex;
+}
+.categorie_cards{
+    display: flex;
+}
+.categorie_card{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.categorie_card_name{
+    position: absolute;
+    /* display: none; */
+    background-color:transparent;
+    color: #070606;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    bottom: -23px;
+    /* left: 1px; */
+}
+
+.categorie_card img{
+    height: 50px;
+    width: 50px;
+}
+
+
+/* recent viwe box start here */
+
+.recently_view{
+    height: 200px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.image_slider_box {
+    width: 100%;
+    overflow: hidden;
+    background-color: bisque;
+}
+
+.image_slider{
+    display: flex;
+    transition: transform 0.5s;
+    width: 100vw; 
+}
+
+.image_slider img {
+    width: 100%;
+    height: 300px;
+    /* border: 2px solid; */
+    flex: 0 0 100%;
+}
+
+                             /* Quick Browse section start here */
+
+.broser_head{
+    margin: 10px;
+    font-size: 30px;
+}
+
+.toglle_box{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.toggle_btn{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 80px;
+
+}
+.toggle_btn .common_gender_btn{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+font-weight: bold;
+}
+.onfocus{
+    border: 2px solid;
+    box-shadow:5px 5px gray ;
+}
+.toggle_btn .Boy{
+    background-color: rgb(157, 201, 231);
+    width:30%;
+    margin: -35px;
+}
+.toggle_btn .Girl{
+    background-color: pink;
+    width:30%;
+    margin: -35px;
+}
+.toggle_btn .All{
+    background-color: bisque;
+    width:60%;
+    border-radius: 45px;
+    z-index: 1;
+}
+.alphabeticle_slider_container{
+    overflow-x: scroll;
+    display: flex;
+    margin: 15px;
+}
+.alphabeticle_slider{
+    display: flex;
+}
+.alphabeticle_content{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 4px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.alphabeticle_slider_container::-webkit-scrollbar{
+    display: none;
+}
+/* this is for firfox */
+.alphabeticle_slider_container{
+    scrollbar-width: none;
+}
+
+                    /* Trending name section start here */
+.trending_name_container{
+    width: 100%;
+
+}
+.trending_name_head{
+    font-size: 20px;
+    margin: 10px;
+}
+.trending_name_content_box{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+
+}
+.trending_name_content{
+    width: 80%;
+    border: 2px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px 10%; */
+    
+}
+
+.trending_name_child-div {
+    width: 100%;
+    height: 100px;
+    /* background-color: lightblue; */
+    /* From https://css.glass */
+background: rgba(253, 255, 254, 0.35);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);
+/* border: 1px solid rgba(255, 255, 255, 0.78); */
+    float: left;
+    display: none;
+    grid-template-areas: 
+        "gender name like more"
+        "gender meaning like more";
+     grid-template-columns: 50px auto 50px 50px;
+
+}
+.gender_div { grid-area: gender; }
+.namesection { grid-area: name; }
+.meaningsection { grid-area: meaning; }
+.likesection { grid-area: like; }
+.more_btn { grid-area: more; }
+
+.gender_div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.likesection ,.more_btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.trending_name_child-div img{
+    width: 40px;
+    height: 40px;
+}
+.meaningsection p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
+    text-overflow: ellipsis;
+}
+.trending_name_show-button {
+    clear: both;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    z-index: 1;
+}
+
+.trending_name_visible_div {
+    display: grid;
+}
+
+                            /* suggested categories start here */
+.suggested_categories_head{
+    font-size: 16px;
+    margin-left: 10px;
+}
+                            /* best name slider start here */
+/* .name{} */
+.best_categorie_head{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.best_categorie_container{
+   margin-top: 10px;
+}
+.best_categorie_slider_box{
+    overflow: scroll;
+    display: flex;
+    margin: 10px;
+    scrollbar-width: none; /* this is for firfox */
+}
+.best_categorie_slider{
+    display: flex;
+}
+ .common_best_idea{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 10px;
+}
+.best_categorie_slider_box::-webkit-scrollbar{
+    display: none;
+}
+                            /* name idea start here */
+
+.name_idea_categorie_head{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.name_idea_categorie_slider_box{
+    overflow: scroll;
+    display: flex;
+    margin: 10px;
+    scrollbar-width: none; /* this is for firfox */
+}
+.name_idea_categorie_slider{
+    display: flex;
+}
+.name_idea_categorie_slider_box::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+                                         /* media qury is start here  */
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    
+}
+
+/* Small Devices (tablets, 576px - 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Add your CSS rules for small screens here */
+}
+
+/* Medium Devices (laptops, 768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Add your CSS rules for medium screens here */
+}
+
+/* Large Devices (desktops, 992px - 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Add your CSS rules for large screens here */
+}
+
+/* Extra Large Devices (large desktops, 1200px and above) */
+@media (min-width: 1200px) {
+    /* Add your CSS rules for extra large screens here */
+}

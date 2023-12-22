@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display and Copy</title>
+</head>
+<body>
+
+<div id="result-container"></div>
+<button onclick="displayAndCopy()">Display and Copy</button>
+
+<script>
+const muslim_boy_name = [
+  {
+    "name": "AadabBulla",
+    "meaning": "The meaning of the name AadabBulla is hope and need. It is one of the top 10 and unique Muslim Baby Girl Names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Ahd",
+    "meaning": "Ahd means pledge or knowledge. It is one of the best, short and unique Muslim baby girl Names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aaliya",
+    "meaning": "Aaliya is a unique and popular Muslim baby girl name. It is the name of one of the top Indian actresses who is one of the daughters of a renowned director Mahesh Bhatt. The meaning of this name is high, tall, towering and excellent.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aamaal",
+    "meaning": "Aamaal means hopes or aspirations. It is a short, sweet and unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aalia",
+    "meaning": "Aalia means one who is exalted or one who has the highest social standings. It is a unique and popular baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Afaf",
+    "meaning": "Afaf means chastity. It is a unique and very less known Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aida",
+    "meaning": "The meaning of the name Aida is visiting or returning. It is one of the unique Muslim baby girl names starting with the letter 'A'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Alia",
+    "meaning": "This name is the variation of the name Aalia. The meaning of this name is one who is exalted or one who has the highest social standings.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Anal",
+    "meaning": "Anal means five. This name is very rarely used and it is one of the unique and sweet names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "May",
+    "meaning": "It is one of the oldest Arabic names. It is a very unique and rarely used as a Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Zia",
+    "meaning": "Zia is a very popular, short and sweet baby girl name. The meaning of the name Zia is light.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Abeer",
+    "meaning": "Abeer means fragrance. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Ablaa",
+    "meaning": "The meaning of the name Ablaa is something that is perfectly formed.It is a short and sweet Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Naaz",
+    "meaning": "Naaz is a very popular Muslim baby girl name. The meaning of this name is pride.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Saba",
+    "meaning": "Saba is a very popular and very well-known Muslim baby girl name. Saba means a breeze.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Afrah",
+    "meaning": "Afrah means happiness. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aisha",
+    "meaning": "Aisha is the name of the wife of Prophet Mohammed. It also means lively or prosperous.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Raeleah",
+    "meaning": "Realeah means sunshine or rays of the sun. It is a unique baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Afraa",
+    "meaning": "The meaning of the name Afraa is white. It is a popular Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rafia",
+    "meaning": "Rafia is a Quranic baby girl name which means kind. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aasmaa",
+    "meaning": "Aasmaa means precious or excellent. It is a modern Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sabeena",
+    "meaning": "A Sabine woman is referred to as Sabeena. The Sabines is a tribe that belonged to the central Apennines of ancient Italy.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nafrin",
+    "meaning": "Nafrin is a unique Muslim baby girl name which means negotiable.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aatikah",
+    "meaning": "Aatikahmeans generous or support. It is a unique Muslim baby girl name starting with the letter 'A'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Naimah",
+    "meaning": "Naimah is a Muslim baby girl name which means delight.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Saalima",
+    "meaning": "Saalima means safe or healthy. It is a very beautiful and unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Saaliha",
+    "meaning": "Saaliha means good or useful. It is a sweet Muslim baby girl name starting with the letter 'S'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Saamiya",
+    "meaning": "The meaning of the name Saamiya is elevated or lofty. It is one of the modern Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Saabira",
+    "meaning": "Saabira is a unique Muslim baby girl name which means one who is patient.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Ahlam",
+    "meaning": "The meaning of the name Ahlamiswitty, one who has pleasant dreams and one who is imaginative. It is a short and sweet Muslim baby girl name..",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sadia",
+    "meaning": "Sadia means princess. It is a short, sweet and unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Abidah",
+    "meaning": "The meaning of the name Abidah is worshipper or devotee. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sabria",
+    "meaning": "Sabria means one with knowledge. It is a unique, short and sweet baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Afroza",
+    "meaning": "The meaning of the name Afroza is the quintessence of fire. It is a modern, short and sweet baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aarushi",
+    "meaning": "Aarushi means the first ray of the sun. This name belongs to Mesh Rashi.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Adeela",
+    "meaning": "Adeela means equal. It is a short, sweet and unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aqsa",
+    "meaning": "Aqsa means a mosque. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Safa",
+    "meaning": "The meaning of the name Safa is clarity, purity or serenity. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Amani",
+    "meaning": "Amani means wishes or aspirations. It is a sweet Muslim baby girl name starting with the letter 'A'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sahna",
+    "meaning": "Sahna means form, figure or complexion. It is a short, sweet and modern Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Safiya",
+    "meaning": "Safiya is a modern Muslim baby girl name beginning with the letter 'S'. The meaning of this name is the untroubled, serene, pure or best friend.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sakeena",
+    "meaning": "The meaning of the name Sakeena is God-inspired, peace of mind or tranquillity.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aliza",
+    "meaning": "Means joyous. It is one of the popular and unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rafa",
+    "meaning": "Rafa means happiness or prosperity. It is a unique Muslim baby girl name starting with letter 'R'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Salma",
+    "meaning": "The meaning of the name Salma is peaceful. It is a very popular Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Ameena",
+    "meaning": "Ameena means trustworthy or faithful. It is a very traditional and popular Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sanah",
+    "meaning": "Sanah means skillful, radiant or elegant. It is a modern Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sahla",
+    "meaning": "Sahla means smooth, soft (ground), fluent or flowing style. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Maha",
+    "meaning": "The meaning of the name Maha is gazelle or antelope. It is a unique, short and sweet Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Saleema",
+    "meaning": "Saleema means safe and healthy. It is one of the unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Samaah",
+    "meaning": "The meaning of the Muslim baby girl name Samaah is generosity. It is a unique baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Samar",
+    "meaning": "Samar is a Muslim baby girl name which means evening conversations. It is a short and sweet baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Anaan",
+    "meaning": "Anaan means clouds. It is a modern and unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Salwa",
+    "meaning": "The meaning of the name Salwa is quail or solace. It is one of the modern and unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Sameeha",
+    "meaning": "Sameeha means generous. It is one of the unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Raawiya",
+    "meaning": "The meaning of the name Raawiya is transmitter. This beautiful name is of Arabic origin. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rabab",
+    "meaning": "Rabab name has a beautiful and unique meaning. Rabab means a white cloud. It is one of the modern and unique baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Radhwa",
+    "meaning": "Radhwa is the name of one of the mountains in Medina. It is one of the beautiful Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Raaida",
+    "meaning": "Raaida means leader. It is one of the unique baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rabeea",
+    "meaning": "The nameRabeea has a beautiful and unique meaning. The meaning of this name is the garden.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Madeeha",
+    "meaning": "Madeeha is a unique Muslim baby girl name. The meaning of this name is praiseworthy.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Radhiyaa",
+    "meaning": "Radhiyaa means contented or satisfied. It is one of the unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Delisha",
+    "meaning": "Delisha means happy or one who makes others happy. It is one of the popular Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Kaia",
+    "meaning": "The meaning of the name Kaia is stability. It is one of the unique Muslim baby girl names starting with the letter 'K'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Raghd",
+    "meaning": "Raghd means pleasant. It is one of the unique Muslim baby girl names starting with the letter 'R'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rand",
+    "meaning": "The meaning of the name Rand is tree of a good scent. It is one of the unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Dhuha",
+    "meaning": "Dhuha means forenoon. It is one of the unique Muslim baby girl names starting with the letter 'D'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Aklima",
+    "meaning": "The meaning of the name Aklima is the first step. It is a modern Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Akshiti",
+    "meaning": "The name Akshiti has a unique meaning. The meaning of this name is victory or peace. It is one of the distinctive Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Reem",
+    "meaning": "Reem means gazelle or antelope. It is a short, sweet, unique and modern baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Altthea",
+    "meaning": "Altthea means sincere. It is one of the modern and unique baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Allanna",
+    "meaning": "The meaning of the name Allanna is beautiful. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Amatullah",
+    "meaning": "Amatullah is one of the traditional yet popular Muslim baby girl names. The meaning of the name Amatullah is the female servant of Allah.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nada",
+    "meaning": "Nada means generosity or dew. It is one of the unique baby girl names popular in Muslim community.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Jala",
+    "meaning": "The meaning of the name Jalal means clarity or elucidation. It is one of the short, sweet and unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Makaarim",
+    "meaning": "Makaarim is a unique Muslim baby girl name. Makaarim means one who is of good and honourable character.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Kaamla",
+    "meaning": "Kaamla means perfect. It is one of the modern Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rasha",
+    "meaning": "Rasha means a young gazelle or antelope. It is one of the unique and rarely know Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Raniya",
+    "meaning": "Raniya is a beautiful Muslim baby girl name which means gazing.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Maisa",
+    "meaning": "Maisa means walking with proud swinging gait. It is one of the unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Maimoona",
+    "meaning": "The meaning of the Muslim baby girl name Maimoona is auspicious or blessed.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rasheeda",
+    "meaning": "Rasheeda means wise or mature. It is one of the traditional Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Majeeda",
+    "meaning": "Majeeda means glorious. It is one of the traditional yet unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Majida",
+    "meaning": "This name is a variant of the name Majida. The meaning of this name is glorious.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Manaar",
+    "meaning": "Manaar means guiding light or lighthouse. It is a traditional Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Manaal",
+    "meaning": "Manaal means attainment or achievement. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Malak",
+    "meaning": "The meaning of the baby girl name Malak is an angel. It is one of the traditional Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Maraam",
+    "meaning": "Maraam means aspiration. It is one of the unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Rawdha",
+    "meaning": "Rawdha means garden. It is one of the traditional and popular Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nabeela",
+    "meaning": "The meaning of the name Nabeela is noble. It is the unique baby girl name starting with the letter 'N'.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Naeema",
+    "meaning": "The meaning of the name Naeema is a blessing or living an enjoyable life.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nadeeda",
+    "meaning": "Nadeeda means equal to another person or rival. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Kanizah",
+    "meaning": "Kanizah means a young girl. It is a unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nadira",
+    "meaning": "Nadirais one of the traditional and oldest Muslim baby girl names. The meaning of this name is rare or precious.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Javeria",
+    "meaning": "Javeria is the name of Prophet Mohammed's wife. It is a traditional and unique Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nadwa",
+    "meaning": "Nadwa means council. It is one of the unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Nabeeha",
+    "meaning": "The meaning of the name Nabeeha is intelligent. It is one of the modern and unique Muslim baby girl names.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Najeeba",
+    "meaning": "Najeeba means one who is of noble birth. It is a traditional Muslim baby girl name.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Tabasumm",
+    "meaning": "Tabasumm is a Muslim baby girl name. The meaning of this name is sweet smile.",
+    "Religion": "muslim"
+  },
+  {
+    "name": "Naila",
+    "meaning": "Naila means acquirer or obtainer. It is a unique, short and sweet Muslim baby girl name.",
+    "Religion": "muslim"
+  }
+
+]
+
+function addPropertyToObjects(array, propertyName, propertyValue) {
+  for (const obj of array) {
+    obj[propertyName] = propertyValue;
+  }
+}
+
+function displayAndCopy() {
+  // Adding a 'popularity' property with a value of 'high'
+  addPropertyToObjects(muslim_boy_name, 'Gender', 'Female');
+
+  // Displaying the modified array on the screen
+  const resultContainer = document.getElementById('result-container');
+  resultContainer.textContent = JSON.stringify(muslim_boy_name, null, 2);
+
+  // Copying the modified array to the clipboard
+  const textarea = document.createElement('textarea');
+  textarea.value = JSON.stringify(muslim_boy_name, null, 2);
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+
+  alert('Array copied to clipboard!');
+}
+</script>
+
+</body>
+</html>

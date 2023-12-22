@@ -1,0 +1,31 @@
+{
+    "top_muslim_boy_names":[
+        {"name": "Aariz", "meaning": "Respectable Man, Intelligent, Leader Of The Nation", "gender": "male"},
+        {"name": "Abeer", "meaning": "Scent, Perfume, Fragrance", "gender": "male"},
+        {"name": "Hisham", "meaning": "Beneficence", "gender": "male"},
+        {"name": "Faraj", "meaning": "Cure", "gender": "male"},
+        {"name": "Kaysan", "meaning": "In Sindhi Meaning Is Wise", "gender": "male"},
+        {"name": "Zaviyar", "meaning": "Brave, Lion’s Heart", "gender": "male"},
+        {"name": "Zarrar", "meaning": "To Strictly", "gender": "male"},
+        {"name": "Jazim", "meaning": "Parsimonious", "gender": "male"},
+        {"name": "Balach", "meaning": "One With Beautiful Locks Of Hair", "gender": "male"},
+        {"name": "Ashal", "meaning": "Most Brilliant, Most Bright, Best Kindled (Fire)", "gender": "male"},
+        {"name": "Zaheeb", "meaning": "Golden", "gender": "male"},
+        {"name": "Fajar", "meaning": "Morning", "gender": "male"},
+        {"name": "Faraan", "meaning": "A Mountain Name", "gender": "male"}
+      ],
+      "top_muslim_girl_name":[
+        {"name": "Minha", "meaning": "A Blessing From Allah, Gift From Allah, Grant", "gender": "female"},
+        {"name": "Esha", "meaning": "Life, Alive, Way of Life", "gender": "female"},
+        {"name": "Eshal", "meaning": "Name Of Flower In Heaven, To Kindle, To Enliven, To Excite", "gender": "female"},
+        {"name": "Najwa", "meaning": "Confidential Talk, Secret Conversation", "gender": "female"},
+        {"name": "Ruhab", "meaning": "Our Who Keeps Ones Promise", "gender": "female"},
+        {"name": "Umaiza", "meaning": "Beautiful and Bright", "gender": "female"},
+        {"name": "Nahiya", "meaning": "One Who Advises, Adviser", "gender": "female"},
+        {"name": "Naairah", "meaning": "Bright, Shining", "gender": "female"},
+        {"name": "Raaya", "meaning": "A Beloved Friend", "gender": "female"},
+        {"name": "Laveeza", "meaning": "Angel Of Heaven", "gender": "female"},
+        {"name": "Zareesh", "meaning": "A Woman With Great Wealth", "gender": "female"},
+        {"name": "Ramlah", "meaning": "Grain of Sand", "gender": "female"}
+      ]      
+}

@@ -1,0 +1,152 @@
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    
+    .header{
+        justify-content:space-between;
+        border-radius: 0px 0px 50px 45px;
+    }
+    .logo{
+        font-size: 10px;
+    }
+    .customize_heder{
+        font-size: 20px;
+        margin: 0px 0px;
+    }
+    .login_option{
+       margin-right: 5px;
+    }
+    .app_categorieas{
+        margin:5px ;
+    }
+    .customize_heder img{
+        width: 30px;
+        height: 30px;
+    }
+    .footer{
+        width: 97%;
+        height: 40px;
+    }
+    .customize_footer{
+        margin: 0px 15px;
+        text-decoration: none;
+    }
+    /* .customize_footer:focus{
+        background-color: transparent;
+    } */
+    .customize_footer img{
+        width: 30px;
+        height: 30px;
+        
+    }
+}
+.tooltip {
+    font-size: 10px;
+    padding: 3px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.categorie_card{
+    height: 60px;
+    width: 60px;
+    border-radius: 20px 10px 20px 10px;
+}
+.categorie_cards{
+    margin: 5px 5px 15px 10px;
+}
+.recently_view{
+    height:100px ;
+    margin: 0 0 15px 0;
+}
+.image_slider img {
+    height: 200px;
+}
+.broser_head{
+    font-size: 20px;
+}
+.toggle_btn{
+    height: 50px;
+    width: 90%;
+    /* border-radius:50px 0px 50px 0px ; */
+}
+.toggle_btn .common_gender_btn{
+    font-size: 20px;
+}
+.toggle_btn .Boy{
+    width: 30%;
+    margin: -21px;
+    border: 45px;
+}
+.toggle_btn .Girl{
+    width: 30%;
+    margin: -21px;
+}
+.toggle_btn .All{
+    width: 70%;
+}
+.alphabeticle_content{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+/* Small Devices (tablets, 576px - 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Add your CSS rules for small screens here */
+}
+
+/* Medium Devices (laptops, 768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Add your CSS rules for medium screens here */
+    .header{
+        justify-content:space-between ;
+        border-radius: 0px 0px 45px 45px;
+        width: 98%;
+        height: 50px;
+    }
+    .logo{
+        font-size: 10px;
+    }
+    .customize_heder{
+        font-size: 20px;
+        margin: 0px 15px;
+
+    }
+    .customize_heder img{
+        width: 40px;
+        height: 40px;
+    }
+    .footer{
+        width: 97%;
+    }
+    .customize_footer{
+        font-size: 20px;
+        margin: 0px 15px;
+    }
+    .customize_footer img{
+        width: 40px;
+        height: 40px;
+    }
+}
+.tooltip {
+    font-size: 10px;
+    padding: 3px;
+    margin: 2px;
+}
+
+.categorie_card{
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+}    
+
+
+/* Large Devices (desktops, 992px - 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Add your CSS rules for large screens here */
+}
+
+/* Extra Large Devices (large desktops, 1200px and above) */
+@media (min-width: 1200px) {
+    /* Add your CSS rules for extra large screens here */
+}
