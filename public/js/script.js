@@ -1,3 +1,4 @@
+// trending name fatching code 
 let topname;
 topnamefatching("jsonsdata/topname.json");
 async function topnamefatching(file){
@@ -62,19 +63,8 @@ for (let i=0;i<10;i++){
         topmeaningdiv.textContent = randomNamesArray[i].meaning;
 }
 }
+// trending name fatching code end here
 
-// top nav start here
-// const gendersection = document.createElement("div")
-//     gendersection.className = "gender_div";
-//     const img_tag = document.createElement("img");
-//   //  console.log(indexa)
-//     if (final_quicksearchID[indexa].Gender == "Male") {
-//       img_tag.src = boy;
-//     } else if (final_quicksearchID[indexa].Gender == "Female") {
-//       img_tag.src = girl;
-//     }
-//     img_tag.alt = "png";
-//     gendersection.appendChild(img_tag)
 function loadPage2(name) {
     var main = document.querySelector('main');
     maincontent = document.getElementById("containt")
@@ -111,6 +101,7 @@ function clickonhome() {
         maincontent.style.display = 'block';
     }
 }
+
 // header start here
 let app_categorieas = document.getElementById("app_categories");
 let app_categorie_box = document.querySelectorAll(".app_categorie_box");
@@ -133,19 +124,34 @@ function removeEventListenerin_categorie() {
     app_categorie_box[i].addEventListener("click", function (event) {
         event.stopPropagation();
     });
+    console.log(window.innerHeight);
+    if(window.innerHeight > 670 && i == 1 && window.innerHeight<810){
+        let app_categorie_box_height_incriment =(window.innerHeight-670)/13;
+        console.log("this is me 1",app_categorie_box_height_incriment);
+        app_categorie_box[1].style.height = `${50+app_categorie_box_height_incriment}%`;
+        // console.log("this is math ",Math.floor((window.innerHeight-670)/11))
+    }else if(window.innerHeight > 809 && i == 1 && window.innerHeight<910){
+        let app_categorie_box_height_incriment =(window.innerHeight-670)/16;
+        console.log("this is me 2",app_categorie_box_height_incriment);
+        app_categorie_box[1].style.height = `${50+app_categorie_box_height_incriment}%`;
+    }else if(window.innerHeight > 909 && i == 1){
+        let app_categorie_box_height_incriment =(window.innerHeight-670)/18;
+        console.log("this is me 3",app_categorie_box_height_incriment);
+        app_categorie_box[1].style.height = `${50+app_categorie_box_height_incriment}%`;
+    }
  }
 }
 app_categorieas.addEventListener("click", open_app_categorieas);
 
 
 // search box start here
-let serach_icon = document.getElementsByClassName("search_option")[0]
+let serach_icon = document.getElementsByClassName("search_option_mobile")[0]
 let search_box = document.querySelector(".search_box")
 let search_back_btn = document.getElementsByClassName("search_back_btn")[0]
 serach_icon.addEventListener("click", function (){
             search_box.style.display = "block";
 
-})
+});
 search_back_btn.addEventListener("click",function(event){
             event.stopPropagation()
             search_box.style.display = "none";
@@ -247,3 +253,10 @@ showButton.addEventListener("click", () => {
     allVisible = !allVisible;
     console.log(allVisible)
 });
+
+// for laptop and pc coding
+if(window.innerWidth >= 768){
+let categorie_cards = document.querySelector(".categorie_cards");
+document.querySelector(".sidebar").appendChild(categorie_cards);
+
+}

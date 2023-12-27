@@ -13,14 +13,23 @@
 
 <body>
     <header class="header">
+        <div>
         <div class="app_categorieas customize_heder">
             <img id="app_categories" src="images and icon/categorie_icon/header_categorie_icon.png" alt="png">
         </div>
         <div class="logo">
             <h1><span class="b_bold">Baby</span><span class="choice">choice</span></h1>
         </div>
-        <div class="search_option customize_heder">
+    </div>
+        <div>
+        <div class="search_option_mobile customize_heder">
             <img src="images and icon/serchbar_icon/searchbar-96.png" alt="png">
+        </div>
+        <div class="search_option_pc">
+            <div class="search_option_pc_content">
+                <img src="images and icon/serchbar_icon/searchbar-64.png" alt="png">
+              <input type="search">
+          </div>
         </div>
         <div class="recent_activity_option customize_heder">
             <img src="images and icon/clock_recent_icon/recent_64.png" alt="png">
@@ -31,6 +40,7 @@
         <div class="login_option customize_heder">
             <img src="images and icon/login_icon/login_64.png" alt="png">
         </div>
+    </div>
     </header>
     <main>
         <div class="containt" id="containt">
@@ -268,6 +278,9 @@
                 </div>
             </div>
         </div>
+        <div class="sidebar"></div>
+        <div class="advertismentbar">Advertisment</div>
+
     </main>
 
 
@@ -308,7 +321,6 @@
             </div>
         </a>
     </footer>
-
     <div class="app_categorie_upper_box app_categorie_box" id="app_categorie_upper_box">
         <div class=".app_categorie_contant">
             <div class="app_categorie_close_btn"></div>
@@ -371,11 +383,12 @@
 
     <!-- search bar start here -->
     <div class="search_box">
-        <form class="search_content">
-            <input type="text" class="search_input" placeholder="search name">
-            <button class="search_back_btn">
-                <img src="images and icon/arrow_icon/left_arrow-64.png" alt="png">
-            </button>
+        <div class="search_back_btn">
+            <img src="images and icon/arrow_icon/left_arrow-64.png" alt="png">
+        </div>
+        <form class="search_content" method="get" action="/search">
+            <input type="search" class="search_input" placeholder="search name" name="search">
+            <button type="submit">submit</button>
         </form>
         <div class="recent_search">
             <h3>No history found</h3>

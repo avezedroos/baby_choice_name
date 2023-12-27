@@ -6,22 +6,23 @@ const app = express();
 const currentDir = __dirname;
 const parentDir = path.dirname(currentDir);
 console.log(parentDir);
+app.set("view engine","hbs");
 
 app.use(express.static(path.join(parentDir,"public")));
-app.get("/",(req,res)=>{
-    console.log(req.url , "hii");
-    res.sendFile(path.join(__dirname,"public","index.html"))
-});
-app.post("/search", (req, res) => {
-    // Assuming you want to handle the search on the server
-    const searchTerm = req.body.searchTerm; // Assuming you are using body-parser middleware
-    console.log("Received search term:", searchTerm);
-    // Perform your search logic here
 
-    // Send a response back to the client
-    res.send(`Search results for: ${searchTerm}`);
+app.get("/avez",(req,res)=>{
+    console.log("hii");
+    // res.sendFile(path.join(parentDir,"public","index.html"))
+    res.send("helo")
 });
 
+app.get("/search", (req, res) => {
+    const searchTerm = req.query.search;
+    // Handle the searchTerm on the server side
+    // res.sendFile(path.join(parentDir,"public","index.html"));
+    console.log(`Search query: ${searchTerm}`)
+    res.send(`Search query: ${searchTerm}`);
+});
 
 app.listen(8000,()=>{
     console.log(`server is running at port localhost:8000`)

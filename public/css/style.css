@@ -22,34 +22,46 @@ iframe{
     right: 0px;
     bottom: 0px;
     display: flex;
-    /* padding: 10px; */
-    justify-content:space-around;
+    justify-content:space-between;
     z-index: 3;
+    border-radius: 0px 0px 50px 45px;
+}
+.header div{
+    display: flex;
+    justify-content:space-between;
+    /* gap: 10px; */
 }
 
 .logo{
-    font-size: 30px;
-    /* background-color: aquamarine; */
+    font-size: 10px;
     display: flex;
     align-items: center;
 }
+.login_option{
+    margin-right: 5px;
+ }
 .b_bold{font: bold;}
 .choice{font: 1px;}
 
 .customize_heder{
     display: flex;
     align-items: center;
-    margin:0 10px ;
+    margin:0px 0px ;
     padding: 0px;
+    font-size: 20px;
 }
-/* #app_categories{
-    color: #070606;
-} */
+.customize_heder img{
+    width: 30px;
+    height: 30px;
+}
+.search_option_mobile{
+    display: none;
+}
 
 /* footer start here */
 .footer{
-    height: 100px;
-    width: 100%;
+    height: 40px;
+    width: 97%;
     background-color: antiquewhite;
     position: fixed;
     bottom: 0px;
@@ -57,17 +69,20 @@ iframe{
     padding: 10px;
     justify-content:space-around;
     z-index: 3;
+    /* box-sizing: border-box; */
 }
 .tooltip {
     position: absolute;
     display: none;
     background-color: #f8f3f3;
     color: #070606;
-    padding: 5px;
+    margin: 2px;
+    padding: 3px;
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 10px;
     bottom: -10px;
     left: -5px;
+    font-weight: bold;
 }
 .tooltip_larg{
     left: -10px;
@@ -80,10 +95,19 @@ iframe{
 .customize_footer{
     display: flex;
     align-items: center;
-    margin:0 20px ;
+    margin:0px 15px ;
     position: relative;
+    text-decoration: none;
+}
+.customize_footer img{
+    width: 30px;
+    height: 30px;
 }
                                /* app categorie box start here */
+.app_categorieas{
+    margin:5px ;
+}
+
 .app_categorie_box{
     width: 70vw;
     height: 0vh;
@@ -113,10 +137,7 @@ iframe{
     bottom: 0px;
     left: 0px;
 }
-/* .app_categorie_box
-.app_categorie_contant{
-    position: relative;
-} */
+
 .app_categorie_close_btn{
     height: 100px;
     width: 100px;
@@ -163,6 +184,10 @@ iframe{
     justify-content: center;
 }
 /* serach box start here */
+
+.header div .search_option_pc{
+    display: none;
+}
 .search_box{
     height: 100vh;
     width: 100vw;
@@ -230,12 +255,14 @@ main{
 }
 .categorie_cards{
     display: flex;
+    margin: 5px 5px 15px 10px;
 }
 .categorie_card{
-    height: 100px;
-    width: 100px;
-    margin: 10px;
+    height: 60px;
+    width: 60px;
+    margin: 5px;
     border: 1px solid;
+    border-radius: 20px 10px 20px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,9 +289,10 @@ main{
 /* recent viwe box start here */
 
 .recently_view{
-    height: 200px;
+    height: 100px;
     width: 100%;
     background-color: antiquewhite;
+    margin: 0 0 15px 0;
 }
 .image_slider_box {
     width: 100%;
@@ -280,7 +308,7 @@ main{
 
 .image_slider img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     /* border: 2px solid; */
     flex: 0 0 100%;
 }
@@ -289,7 +317,7 @@ main{
 
 .broser_head{
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .toglle_box{
@@ -299,8 +327,8 @@ main{
 }
 .toggle_btn{
     display: flex;
-    width: 80%;
-    height: 80px;
+    width: 90%;
+    height: 50px;
     justify-content: space-between;
     overflow: hidden;
     border-radius: 80px;
@@ -310,7 +338,7 @@ main{
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 40px;
+font-size: 20px;
 font-weight: bold;
 }
 .onfocus{
@@ -320,16 +348,17 @@ font-weight: bold;
 .toggle_btn .Boy{
     background-color: rgb(157, 201, 231);
     width:30%;
-    margin: -35px;
+    margin: -21px;
+    border: 45px;
 }
 .toggle_btn .Girl{
     background-color: pink;
     width:30%;
-    margin: -35px;
+    margin: -21px;
 }
 .toggle_btn .All{
     background-color: bisque;
-    width:60%;
+    width:70%;
     border-radius: 45px;
     z-index: 1;
 }
@@ -342,10 +371,10 @@ font-weight: bold;
     display: flex;
 }
 .alphabeticle_content{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border: 1px solid black;
-    margin: 4px;
+    margin: 5px;
     padding: 3px;
     display: flex;
     align-items: center;
