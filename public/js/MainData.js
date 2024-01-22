@@ -261,5 +261,5 @@ function redirectinnameinfo(clickedDiv){
   console.log(h2element)
   let text1 = h2element.textContent;
   console.log(text1)
-  window.open(`/nameinfo.html?name=${text1}`, '_blank');
+  window.open(`/search?name=${text1}`, '_blank');
 }

@@ -1,12 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    its login page 
-    i wil set it in letters
-</body>
-</html>
+console.log("avez")
+function validateForm() {
+    const fnameInput = document.getElementsByName("fname")[0].value;
+    const fnameError = document.getElementById("fnameError");
+    const lnameInput = document.getElementsByName("lname")[0].value;
+    const lnameError = document.getElementById("lnameError");
+    const usernameInput = document.getElementsByName("userName")[0].value;
+    const usernameError = document.getElementById("usernameError");
+    const password = document.getElementsByName("password")[0].value;
+    const passwordError = document.getElementById("password");
+    const cpassword = document.getElementsByName("cpassword")[0].value;
+    const cpasswordError = document.getElementById("cpassword");
+    console.log("yes i am in")
+    let isValid = false;
+    
+    const fnameRegex = /^[a-zA-Z]{1,15}$/;
+    if (fnameRegex.test(fnameInput)) {
+        fnameError.textContent = "";
+        fnameError.style.display ="none";
+        var isValid1 = true;
+    } else {
+       fnameError.style.display= "block"
+       fnameError.textContent = "Invalid input. Only 1 to 15 alphabetical characters allowed.";
+       var isValid1 = false;
+    }
+    if (fnameRegex.test(lnameInput)) {
+        lnameError.textContent = "";
+        lnameError.style.display ="none";
+        var isValid2 = true;
+    } else {
+       lnameError.style.display= "block"
+       lnameError.textContent = "Invalid input. Only 1 to 15 alphabetical characters allowed.";
+       var isValid2 = false;
+    }
+    if(/^[a-zA-Z]+[A-Za-z0-9_]{0,15}$/.test(usernameInput)){
+        usernameError.textContent = "";
+        usernameError.style.display ="none";
+        var isValid3 = true;
+    }
+    else {
+        usernameError.style.display= "block"
+        usernameError.textContent = "Invalid input. Only 1 to 15 alphnumeric characters and '_' are allowed.";
+        var isValid3 = false;
+     }
+     if(/^[a-zA-Z0-9][A-Za-z0-9@]{7,9}$/.test(password)){
+        passwordError.textContent = "";
+        passwordError.style.display ="none";
+        var isValid4 = true;
+    }
+    else {
+        passwordError.style.display= "block"
+        passwordError.textContent = "Invalid Password. Only 8 to 10 alphnumeric characters and '@' are allowed.";
+        var isValid4 = false;
+     }
+    //  if(password === cpassword){
+    //     cpasswordError.textContent = "";
+    //     cpasswordError.style.display ="none";
+    //     var isValid5 = true;
+    // }
+    // else {
+    //     cpasswordError.style.display= "block"
+    //     cpasswordError.textContent = "Password is not Match";
+    //     var isValid5 = false;
+    //  }
+
+
+    if(isValid1 === true && isValid2 === true && isValid3 === true){
+       alert("ahkbkjbkjb");
+        isValid = true
+        console.log(true)
+    }
+    return isValid;
+}

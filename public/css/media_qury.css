@@ -103,6 +103,10 @@
         padding-left: 5px;
         font-size: 20px;
       }
+      .search_option_pc_content button{
+        background-color: transparent;
+        border: none;
+      }
 
 }
 

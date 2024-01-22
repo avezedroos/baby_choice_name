@@ -181,7 +181,12 @@ function Open_recent_activity_option(event){
 
 recent_activity_option.addEventListener("click",Open_recent_activity_option);
 
-
+// login option start here
+let loginOption = document.getElementsByClassName("login_option")[0];
+loginOption.addEventListener("click",()=>{
+    console.log("this is login.html,line no. 187")
+    window.location.href = "login.html";
+})
 // image slider start here
 const slider = document.querySelector('.image_slider');
 const images = document.querySelectorAll('.image_slider img');
@@ -260,3 +265,4 @@ let categorie_cards = document.querySelector(".categorie_cards");
 document.querySelector(".sidebar").appendChild(categorie_cards);
 
 }
+console.log(window.innerWidth)

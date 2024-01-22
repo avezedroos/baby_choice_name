@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="logo">baby choice</div>
+    <div class="options">
+        <div class="google"><img src="images and icon/social/google.png" alt=""></div>
+        <div class="facebook"><img src="images and icon/social/facebook.png" alt=""></div>
+    </div>
+    <div>or using email address</div>
+    <form class="signup_form" action="/signup" method="post" onsubmit="return handleSubmit()">
+        <span id="error"></span>
+        <input type="text" placeholder="your first name" name="fname" >
+        <span id="fnameError"></span>
+        <input type="text" placeholder="your first name" name="lname" >
+        <span id="lnameError"></span>
+        <input type="text" placeholder="your username" name="userName" >
+        <span id="usernameError"></span>
+        <input type="email" placeholder="Email Address" name="email" >
+        <span id="emailError"></span>
+        <div class="gender">
+            <input type="radio" name="gender" value="male" > Male
+            <input type="radio" name="gender" value="female" > Female            
+        </div>
+        <input type="password" placeholder="your password" name="password" autocomplete="new-password" >
+        <span id="passwordError"></span>
+        <input type="password" placeholder="conform password" name="cpassword" >
+        <span id="cpasswordError"></span>
+        <button type="submit">conform</button>
+    </form>
+    <form class="login_form" action="">
+        <input type="text" placeholder="Type your UserName or @Email-Id">
+        <input type="password" placeholder="password">
+        <span>Forget password?</span>
+        <button type="submit">Login</button>
+    </form>
+    <div>Don't have an account?<span class="sign_up_btn"> Sign up</span></div>
+    <script src="js/login.js"></script>
+</body>
+</html>

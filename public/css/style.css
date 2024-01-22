@@ -207,14 +207,18 @@ iframe{
     align-items: center;
     border-bottom: 1px solid;
 }
+
 .search_back_btn img{
     width: 45px;
 }
 .search_input{
-    width: 70%;
+    width: 100%;
     height: 30px;
     border-radius: 40px;
     padding: 2px;
+}
+.search_input_form{
+    width: 80%;
 }
 
 /* recent activity */

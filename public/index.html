@@ -26,10 +26,10 @@
             <img src="images and icon/serchbar_icon/searchbar-96.png" alt="png">
         </div>
         <div class="search_option_pc">
-            <div class="search_option_pc_content">
-                <img src="images and icon/serchbar_icon/searchbar-64.png" alt="png">
-              <input type="search">
-          </div>
+            <form class="search_option_pc_content" method="get" action="/search">
+                <button type="submit"><img src="images and icon/serchbar_icon/searchbar-64.png" alt="png"></button>
+              <input type="search" name="name">
+          </form>
         </div>
         <div class="recent_activity_option customize_heder">
             <img src="images and icon/clock_recent_icon/recent_64.png" alt="png">
@@ -383,13 +383,15 @@
 
     <!-- search bar start here -->
     <div class="search_box">
+        <div class="search_content">
         <div class="search_back_btn">
             <img src="images and icon/arrow_icon/left_arrow-64.png" alt="png">
         </div>
-        <form class="search_content" method="get" action="/search">
-            <input type="search" class="search_input" placeholder="search name" name="search">
-            <button type="submit">submit</button>
+        <form class="search_input_form" method="get" action="/search">
+            <input type="search" class="search_input" placeholder="search name" name="name">
+            <!-- <button type="submit">submit</button> -->
         </form>
+    </div>
         <div class="recent_search">
             <h3>No history found</h3>
         </div>
